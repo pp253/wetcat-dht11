@@ -55,5 +55,9 @@ while True:
         GPIO.output(LED_R_PIN, GPIO.HIGH)
     except:
       print('Failed')
+      # light up all LED to show an error
+      GPIO.output(LED_G_PIN, GPIO.HIGH)
+      GPIO.output(LED_Y_PIN, GPIO.HIGH)
+      GPIO.output(LED_R_PIN, GPIO.HIGH)
 
   time.sleep(DETECT_INTERVAL)
